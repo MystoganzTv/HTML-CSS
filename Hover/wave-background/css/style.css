@@ -10,6 +10,7 @@ section {
     background: url(/img/bg.jpg);
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 section .wave {
@@ -19,7 +20,9 @@ section .wave {
     bottom: 0;
     left: 0;
     background: url(/img/wave.png);
-    animation: animate 10s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation: animate 20s linear infinite;
 }
 
 section .wave::before {
@@ -32,7 +35,7 @@ section .wave::before {
     left: 0;
     opacity: 0.6;
     animation-delay: -5s;
-    animation: animate 20s linear infinite;
+    animation: animate 30s linear infinite;
 }
 
 section .wave::after {
@@ -43,7 +46,7 @@ section .wave::after {
     position: absolute;
     top: 0;
     left: 0;
-    animation: animate-reverse 10s linear infinite;
+    animation: animate-reverse 15s linear infinite;
 }
 
 @keyframes animate {
